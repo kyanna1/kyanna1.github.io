@@ -11,14 +11,22 @@
             }
           .topnav {
             font: 32px monospace;
-            float: middle;
+            text-align: center;
               
           }
-          .projectsDropdown {
+          .dropbtn {
+            background-color: blue;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+          }
+          .dropdown {
             position: relative;
             display: inline-block;
           }
-          .dropdownContent {
+
+          .dropdown-content {
             display: none;
             position: absolute;
             background-color: grey;
@@ -27,32 +35,34 @@
             z-index: 1;
           }
 
-         .dropdownContent a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-        }
-        .dropdownContent a:hover {background-color: orange;}
-        .dropdown:hover .dropdownContent {display: block;}
-        .dropdown:hover .projects {background-color: yellow;}
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+
+          .dropdown-content a:hover {background-color: orange;}
+
+          .dropdown:hover .dropdown-content {display: block;}
+
+          .dropdown:hover .dropbtn {background-color: yellow;}
         </style>
   </head>
   <body>
         <h1> kaitlyn </h1>
         <hr>
         <div class="topnav">
-            <a href="#home">Home</a>
-            <div class = projectsDropdown>
-              <a href="#projects">Projects</a>
-              <div class=dropdownContent>
-                <a href=#Website>This Website</a>
-                <a href=#greenhouse>Greenhouse</a>
-                <a href =#plantShelf>Plant Shelf</a>
-                <a href=#robot>Robot</a>
-                <a href=#riemannHypothesis>Riemann Hypothesis</a>
+          <a href="#home">Home</a>
+              <! <a href="#projects">Projects</a> >
+              <div class="dropdown">
+                <button class="dropbtn">Projects</button>
+                <div class="dropdown-content">
+                  <a href="#website">Website</a>
+                  <a href="#greenhouse">Greenhouse</a>
+                  <a href="#robot">Robot</a>
+                </div>
               </div>
-            </div>
             <a href="#blog">Blog</a> 
             <a href="#about_me">About Me</a>
         </div>
